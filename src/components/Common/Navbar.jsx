@@ -21,6 +21,7 @@ function Navbar() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    console.log("ENV Variables:====> ", process.env.FOLDER_NAME);
     (async () => {
       setLoading(true);
       try {
