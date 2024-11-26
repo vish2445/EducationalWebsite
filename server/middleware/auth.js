@@ -21,7 +21,7 @@ exports.auth = async (req, res, next) => {
 
 		try {
 			// Verifying the JWT using the secret key stored in environment variables
-			const decode = await jwt.verify(token, process.env.JWT_SECRET);
+			const decode = await jwt.verify(token, "mongodb+srv://sujal2k3:E2UBkzq7KK5KT5yF@cluster0.chjyba0.mongodb.net/StudyNotionDB");
 			console.log(decode);
 			// Storing the decoded JWT payload in the request object for further use
 			req.user = decode;
